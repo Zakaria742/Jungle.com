@@ -2,8 +2,8 @@
 
 :root {
     --main-color: #71c971;
-    --second-color: #fff;
-    --third-color: firebrick;
+    --second-color: #ffffff;
+    --third-color: rgb(231, 100, 100);
     --main-font: "Poppins";
 }
 
@@ -75,8 +75,7 @@ main {
     align-items: center;
     justify-content: space-between;
     padding: 15em;
-    background-color: rgb(113, 201, 113);
-}
+     background-color: rgb(233, 233, 233);/*#ffdb58; */
 .main-title {
     max-width: 30%;
     display: grid;
@@ -90,7 +89,7 @@ main {
         transition: text-shadow ease 1000ms forwards alternate;
         &:hover{
             animation: shadow ease 500ms forwards alternate;
-        }
+        } 
     }
 }
 
@@ -108,3 +107,11 @@ span{
         text-shadow: -10px 0px #ffffff;
     }
 }
+
+@media (max-width: 600px){
+    .main-title{
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+} 
