@@ -1,7 +1,5 @@
-const mainTitle = document.querySelector("h1");
+let title = document.getElementById("title-card");
 
 
-
-mainTitle.on(mouseout) = function() {
-    mainTitle.style.animation = "shadow ease 500ms alternate-reverse";
-}
+console.log("I'm locked and loaded!");
+title.style = "transform: rotateX(0deg)";
