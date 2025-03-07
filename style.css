@@ -451,6 +451,9 @@ span {
 	}
 	#main-title {
 		top: 80vw;
+		&>h1{
+			font-size: 10vw;
+		}
 	}
 	#form{
 		width: 100%;
