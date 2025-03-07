@@ -1,6 +1,18 @@
 let title = document.getElementById("title-card");
 let span = document.getElementsByTagName("span");
+let cursor = document.getElementById("cursor");
 
+let offsetX = 0;
+let offsetY = 0;
+document.addEventListener("mousemove", function (event) {
+
+	//console.log('Mouse X : ', event.clientX, 'Mouse Y : ', event.clientY);
+	setTimeout(() => {
+		cursor.style.top = `${event.clientY - 10}px`;
+		cursor.style.left = `${event.clientX - 10}px`;
+	}, 90)
+
+})
 
 function right() {
 	title.style = "text-shadow: 1vw -.1px 0px black;";

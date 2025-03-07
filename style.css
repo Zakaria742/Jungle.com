@@ -16,9 +16,6 @@
 	box-sizing: border-box;
 	list-style: none;
 	text-decoration: none;
-	&::selection{
-		color: var(--second-color);
-	}
 }
 
 body {
@@ -335,6 +332,7 @@ main {
             border: solid var(--second-color);
             cursor: pointer;
 			border-radius: 0px;
+			transition: border-radius ease-in-out 300ms, scale ease-in-out 300ms;
 			&:hover{
 				border-radius: 20px;
 				scale: 1.1;
@@ -441,6 +439,16 @@ span {
 	color: var(--third-color);
 	font-weight: bolder;
 	text-decoration-line: underline black;
+}
+
+#cursor{
+	position: fixed;
+	z-index: 99;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: black;
+	pointer-events: none;
 }
 
 @media (max-width: 700px) {
