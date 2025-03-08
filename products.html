@@ -67,7 +67,7 @@
     <Products id="products">
         <section id="seeds">
             <h1 class="product-title">Seeds</h1>
-            <div class="card">
+            <div class="card" onclick="showPopup()">
                 <h2>Tomato Seeds</h2>
                 <img src="./img/tomato-seeds-transparent.JPG" alt="">
                 <div class="details">
@@ -75,7 +75,7 @@
                     <button class="buy">GET</button>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" onclick="showPopup()">
                 <h2>Peeper Seeds</h2>
                 <img src="./img/pepper-seeds-transparent.JPG" alt="">
                 <div class="details">
@@ -83,7 +83,7 @@
                     <button class="buy">GET</button>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" onclick="showPopup()">
                 <h2>Potato Seeds</h2>
                 <img src="./img/potato-transparent.JPG" alt="">
                 <div class="details">
@@ -97,10 +97,10 @@
         <section id="seeds">
             <h1 class="product-title">Farming tools</h1>
 
-            <div class="card">
+            <div class="card" onclick="showPopup()">
                 <h2>Sickle</h2>
                 <img src="./img/sickle.jpg" alt="" width="250px">
-                <div id="details">
+                <div class="details">
                     <p>10.99$</p>
                     <button class="buy">GET</button>
                 </div>
@@ -115,7 +115,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card" onclick="showPopup()">
                 <h2>Shovel</h2>
                 <img src="./img/Shovel.jpg" alt="" width="250px">
                 <div class="details">
@@ -128,7 +128,7 @@
 
         <section id="seeds">
             <h1 class="product-title">Farming materials</h1>
-            <div class="card">
+            <div class="card" onclick="showPopup()">
                 <h2>Bag of soil</h2>
                 <img src="./img/soil.avif" alt="">
                 <div class="details">
@@ -136,7 +136,7 @@
                     <button class="buy">GET</button>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" onclick="showPopup()">
                 <h2>Fertilizer</h2>
                 <img src="./img/fertilizer-bag-trasparent.JPG" alt="">
                 <div class="details">
@@ -144,7 +144,7 @@
                     <button class="buy">GET</button>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" onclick="showPopup()">
                 <h2>Tomato Seeds</h2>
                 <img src="./img/hose-transparent.JPG" alt="">
                 <div class="details">
@@ -154,7 +154,23 @@
             </div>
         </section>
     </Products>
-
+    <section id="popup-container">
+        <div id="popup-header">
+            <svg onclick="hidePopup()" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#1f1f1f"><path d="m251.33-204.67-46.66-46.66L433.33-480 204.67-708.67l46.66-46.66L480-526.67l228.67-228.66 46.66 46.66L526.67-480l228.66 228.67-46.66 46.66L480-433.33 251.33-204.67Z"/></svg>
+        </div>
+        <section id="popup">
+            <div id="product-basic-info">
+                <img src="./STIHL-BR-800-C-E-3.png" id="product-img" />
+                <h2 id="product-name">STIHL: BR-800 C-E</h2>
+            </div>
+            <div id="description">
+                <h3 id="description-title">Description :</h3>
+                <p id="description-content">
+                    &emsp;&emsp;The Stihl BR800 C-E backpack blower is now STIHL’s most powerful backpack blower to date. It has been designed with both power and comfort in mind and would be an ideal choice for landscapers, local authorities and contractors with enough strength to take on the toughest jobs with ease.It is seriously powerful! There is a blowing force of 41 N (BR 700 is 35 N) and so the Stihl BR800 is an excellent tool for clearing heavy, wet leaves in the Autumn & Winter months.The Stihl 4-MIX engine of the machine means lower fuel consumption and an increase in run-time meaning more time can be spent working. The length of the blower tube and position of the handle can be adjusted quickly without the need for tools. The blower tube is easy to swivel and has a wide blowing range, lowering the strain felt when working. It also features the STIHL Anti vibration System to reduce the vibration felt on your back.
+                </p>
+            </div>
+        </section>
+    </section>
     <footer>
         <div class="footer">
             <div class="header">
@@ -178,7 +194,7 @@
                     <h3 class="title">Contact US</h3>
                     <a href="mailto : sofyanehab2024@gmail.com" class="emails">sofyanehab2024@gmail.com</a><br>
                     <a href="mailto : zakizakaria@gmail.com" class="emails">zakizakaria@gmail.com"</a><br>
-                    <a href="mailto : mohamedhammou@gmail.com" class="emails">mohamedhammou@gmail.com</a><br>
+                    <a href="mailto : hammou.mohamned@gmail.com" class="emails">hammou.mohamned@gmail.com</a><br>
                 </div>
 
 
