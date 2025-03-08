@@ -2,6 +2,8 @@ let title = document.getElementById("title-card");
 let span = document.getElementsByTagName("span");
 let cursor = document.getElementById("cursor");
 let body = document.getElementById("body-main");
+let popupContainer= document.getElementById('popup-container');
+let cards = document.querySelectorAll(".card");
 let innerCircle = document.getElementById("inner_circle");
 let offset = 33;
 document.addEventListener("mousemove", function (event) {
@@ -85,3 +87,13 @@ function clearTextrea() {
 submit.addEventListener("click", () => {
 	alert(text.value);
 });
+
+
+
+
+
+//Popup events
+
+function showPopup() {
+    popupContainer.style.display = 'flex';
+}
