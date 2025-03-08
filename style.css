@@ -30,6 +30,7 @@ body {
 	bottom: 0;
 	transition: opacity 2000ms ease-out, bottom ease-in-out 2000ms;
 	margin-top: .1rem;
+	position: relative;
 }
 
 
@@ -401,7 +402,6 @@ main {
 	font-size: 1rem;
 	text-align: center;
 	margin: 1rem 0rem;
-	z-index: 1;
 	padding: 13rem 2rem;
 	height: 100%;
 	width: 200px;
@@ -416,7 +416,7 @@ main {
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 9999;
+    z-index: 0;
     background-color: rgba(104, 104, 104, 0.486);
     display: none;
     flex-direction: column;
