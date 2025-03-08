@@ -1,19 +1,23 @@
 let title = document.getElementById("title-card");
 let span = document.getElementsByTagName("span");
 let cursor = document.getElementById("cursor");
-
-let offsetX = 0;
-let offsetY = 0;
+let body = document.getElementById("body-main");
+let innerCircle = document.getElementById("inner_circle");
+let offset = 33;
 document.addEventListener("mousemove", function (event) {
 
 	//console.log('Mouse X : ', event.clientX, 'Mouse Y : ', event.clientY);
-	setTimeout(() => {
-		cursor.style.top = `${event.clientY - 10}px`;
-		cursor.style.left = `${event.clientX - 10}px`;
-	}, 90)
-
+	cursor.style.top = `${event.clientY - offset}px`;
+	cursor.style.left = `${event.clientX - offset}px`;
 })
 
+document.addEventListener("mousedown", () => {
+	cursor.style.scale = "0.33";
+})
+
+document.addEventListener("mouseup", () => {
+	cursor.style.scale = "0.3";
+})
 function right() {
 	title.style = "text-shadow: 1vw -.1px 0px black;";
 }
@@ -25,6 +29,21 @@ function left() {
 function def() {
 	title.style = "text-shadow: 0px 0px 0px black;";
 }
+
+function show() {
+	body.style.opacity = "0%";
+	body.style.bottom = "50rem";
+	setTimeout(() => {
+		body.style.opacity = "100%";
+		body.style.bottom = "0";
+	}, 10);
+}
+
+if (!sessionStorage.getItem("show")) {
+	show();
+	sessionStorage.setItem("show", true);
+}
+
 
 let dropdown = document.querySelector("#dropdown");
 let dropBtns = document.querySelector(".dropdown-btns");
@@ -42,3 +61,27 @@ function changeDropIcon() {
             </svg>`;
 	}
 }
+
+
+const stars = document.querySelectorAll(".stars input");
+const submit = document.querySelector("button");
+const text = document.querySelector("textarea");
+
+stars.forEach((star) => {
+	star.addEventListener("change", function () {
+		const rating = this.value;
+
+		stars.forEach((star) => {
+			const label = document.querySelector(`label[for="${star.id}"]`);
+			label.style.color = star.value <= rating ? "gold" : "gray";
+		});
+	});
+});
+
+function clearTextrea() {
+	document.getElementById("description").value = "";
+}
+
+submit.addEventListener("click", () => {
+	alert(text.value);
+});

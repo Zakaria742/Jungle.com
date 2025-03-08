@@ -8,34 +8,51 @@
     <title>Document</title>
 </head>
 
-<body>
-    <div id="cursor"></div>
+<body id="body-main">
+    <div id="cursor">
+        <div id="inner_circle"></div>
+    </div>
     <input type="checkbox" name="dropdown" id="dropdown" />
     <nav class="nav-bar">
         <h2 class="nav-title"><a href="./index.html">JUNGLE.COM</a></h2>
         <ul>
             <li title="Home">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#1f1f1f">
+                    <path
+                        d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
+                </svg>
                 <a href="index.html">Home</a>
             </li>
             <li title="Products">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m260-520 220-360 220 360H260ZM700-80q-75 0-127.5-52.5T520-260q0-75 52.5-127.5T700-440q75 0 127.5 52.5T880-260q0 75-52.5 127.5T700-80Zm-580-20v-320h320v320H120Zm580-60q42 0 71-29t29-71q0-42-29-71t-71-29q-42 0-71 29t-29 71q0 42 29 71t71 29Zm-500-20h160v-160H200v160Zm202-420h156l-78-126-78 126Zm78 0ZM360-340Zm340 80Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#1f1f1f">
+                    <path
+                        d="m260-520 220-360 220 360H260ZM700-80q-75 0-127.5-52.5T520-260q0-75 52.5-127.5T700-440q75 0 127.5 52.5T880-260q0 75-52.5 127.5T700-80Zm-580-20v-320h320v320H120Zm580-60q42 0 71-29t29-71q0-42-29-71t-71-29q-42 0-71 29t-29 71q0 42 29 71t71 29Zm-500-20h160v-160H200v160Zm202-420h156l-78-126-78 126Zm78 0ZM360-340Zm340 80Z" />
+                </svg>
                 <a href="products.html">Products</a>
             </li>
-            <li  title="Contact">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m480-80-10-120h-10q-142 0-241-99t-99-241q0-142 99-241t241-99q71 0 132.5 26.5t108 73q46.5 46.5 73 108T800-540q0 75-24.5 144t-67 128q-42.5 59-101 107T480-80Zm80-146q71-60 115.5-140.5T720-540q0-109-75.5-184.5T460-800q-109 0-184.5 75.5T200-540q0 109 75.5 184.5T460-280h100v54Zm-101-95q17 0 29-12t12-29q0-17-12-29t-29-12q-17 0-29 12t-12 29q0 17 12 29t29 12Zm-29-127h60q0-30 6-42t38-44q18-18 30-39t12-45q0-51-34.5-76.5T460-720q-44 0-74 24.5T344-636l56 22q5-17 19-33.5t41-16.5q27 0 40.5 15t13.5 33q0 17-10 30.5T480-558q-35 30-42.5 47.5T430-448Zm30-65Z"/></svg>
+            <!-- <li title="Contact">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#1f1f1f">
+                    <path
+                        d="m480-80-10-120h-10q-142 0-241-99t-99-241q0-142 99-241t241-99q71 0 132.5 26.5t108 73q46.5 46.5 73 108T800-540q0 75-24.5 144t-67 128q-42.5 59-101 107T480-80Zm80-146q71-60 115.5-140.5T720-540q0-109-75.5-184.5T460-800q-109 0-184.5 75.5T200-540q0 109 75.5 184.5T460-280h100v54Zm-101-95q17 0 29-12t12-29q0-17-12-29t-29-12q-17 0-29 12t-12 29q0 17 12 29t29 12Zm-29-127h60q0-30 6-42t38-44q18-18 30-39t12-45q0-51-34.5-76.5T460-720q-44 0-74 24.5T344-636l56 22q5-17 19-33.5t41-16.5q27 0 40.5 15t13.5 33q0 17-10 30.5T480-558q-35 30-42.5 47.5T430-448Zm30-65Z" />
+                </svg>
                 <a href="#">Contact</a>
-            </li>
+            </li> -->
             <li title="About">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M440-560q33 0 56.5-23.5T520-640q0-33-23.5-56.5T440-720q-33 0-56.5 23.5T360-640q0 33 23.5 56.5T440-560Zm0 160q45 0 84.5-19t68.5-54q-35-23-73.5-35T440-520q-41 0-79.5 12T287-473q29 35 68.5 54t84.5 19Zm384 280L636-308q-41 32-90.5 50T440-240q-134 0-227-93t-93-227q0-134 93-227t227-93q134 0 227 93t93 227q0 56-18 105.5T692-364l188 188-56 56ZM440-320q100 0 170-70t70-170q0-100-70-170t-170-70q-100 0-170 70t-70 170q0 100 70 170t170 70Zm0-240Z"/></svg>
-                <a href="#">About us</a>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#1f1f1f">
+                    <path
+                        d="M440-560q33 0 56.5-23.5T520-640q0-33-23.5-56.5T440-720q-33 0-56.5 23.5T360-640q0 33 23.5 56.5T440-560Zm0 160q45 0 84.5-19t68.5-54q-35-23-73.5-35T440-520q-41 0-79.5 12T287-473q29 35 68.5 54t84.5 19Zm384 280L636-308q-41 32-90.5 50T440-240q-134 0-227-93t-93-227q0-134 93-227t227-93q134 0 227 93t93 227q0 56-18 105.5T692-364l188 188-56 56ZM440-320q100 0 170-70t70-170q0-100-70-170t-170-70q-100 0-170 70t-70 170q0 100 70 170t170 70Zm0-240Z" />
+                </svg>
+                <a href="about.html">About us</a>
             </li>
         </ul>
         <label for="dropdown" class="dropdown">
-            <svg class="dropdown-btn dropdown-btns" name="dropdown" xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="size-6" onclick="changeDropIcon()">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            <svg class="dropdown-btn dropdown-btns" name="dropdown" xmlns="http://www.w3.org/2000/svg" fill=""
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" onclick="changeDropIcon()">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
         </label>
 
@@ -43,60 +60,32 @@
     <ul class="dropdown-content">
         <a href="./index.html">Home</a>
         <a href="./products.html">Products</a>
-        <a href="./contact.html">Contact</a>
+        <!-- <a href="./contact.html">Contact</a> -->
         <a href="./about.html">About us</a>
     </ul>
+
     <Products id="products">
         <section id="seeds">
             <h1 class="product-title">Seeds</h1>
             <div class="card">
                 <h2>Tomato Seeds</h2>
-                <img src="./img/tomato-seeds.jpg" alt="" width="250px">
+                <img src="./img/tomato-seeds-transparent.JPG" alt="">
                 <div id="details">
                     <p>10.99$</p>
                     <button class="buy">GET</button>
                 </div>
             </div>
             <div class="card">
-                <h2>Tomato Seeds</h2>
-                <img src="./img/tomato-seeds.jpg" alt="" width="250px">
+                <h2>Peeper Seeds</h2>
+                <img src="./img/pepper-seeds-transparent.JPG" alt="">
                 <div id="details">
                     <p>10.99$</p>
                     <button class="buy">GET</button>
                 </div>
             </div>
             <div class="card">
-                <h2>Tomato Seeds</h2>
-                <img src="./img/tomato-seeds.jpg" alt="" width="250px">
-                <div id="details">
-                    <p>10.99$</p>
-                    <button class="buy">GET</button>
-                </div>
-            </div>
-        </section>
-
-        
-        <section id="seeds">
-            <h1 class="product-title">Gardening tools</h1>
-            <div class="card">
-                <h2>Tomato Seeds</h2>
-                <img src="./img/tomato-seeds.jpg" alt="" width="250px">
-                <div id="details">
-                    <p>10.99$</p>
-                    <button class="buy">GET</button>
-                </div>
-            </div>
-            <div class="card">
-                <h2>Tomato Seeds</h2>
-                <img src="./img/tomato-seeds.jpg" alt="" width="250px">
-                <div id="details">
-                    <p>10.99$</p>
-                    <button class="buy">GET</button>
-                </div>
-            </div>
-            <div class="card">
-                <h2>Tomato Seeds</h2>
-                <img src="./img/tomato-seeds.jpg" alt="" width="250px">
+                <h2>Potato Seeds</h2>
+                <img src="./img/potato-transparent.JPG" alt="">
                 <div id="details">
                     <p>10.99$</p>
                     <button class="buy">GET</button>
@@ -104,12 +93,52 @@
             </div>
         </section>
 
-        
+
         <section id="seeds">
-            <h1 class="product-title">Gardening materials</h1>
+            <h1 class="product-title">Farming tools</h1>
+
             <div class="card">
-                <h2>Tomato Seeds</h2>
-                <img src="./img/tomato-seeds.jpg" alt="" width="250px">
+                <h2>Sickle</h2>
+                <img src="./img/sickle.jpg" alt="" width="250px">
+                <div id="details">
+                    <p>10.99$</p>
+                    <button class="buy">GET</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Hoe</h2>
+                <img src="./img/hoe.jpg" alt="" width="250px">
+                <div id="details">
+                    <p>10.99$</p>
+                    <button class="buy">GET</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Shovel</h2>
+                <img src="./img/Shovel.jpg" alt="" width="250px">
+                <div id="details">
+                    <p>10.99$</p>
+                    <button class="buy">GET</button>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="seeds">
+            <h1 class="product-title">Farming materials</h1>
+            <div class="card">
+                <h2>Bag of soil</h2>
+                <img src="./img/soil.avif" alt="">
+                <div id="details">
+                    <p>10.99$</p>
+                    <button class="buy">GET</button>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Fertilizer</h2>
+                <img src="./img/fertilizer-bag-trasparent.JPG" alt="">
                 <div id="details">
                     <p>10.99$</p>
                     <button class="buy">GET</button>
@@ -117,15 +146,7 @@
             </div>
             <div class="card">
                 <h2>Tomato Seeds</h2>
-                <img src="./img/tomato-seeds.jpg" alt="" width="250px">
-                <div id="details">
-                    <p>10.99$</p>
-                    <button class="buy">GET</button>
-                </div>
-            </div>
-            <div class="card">
-                <h2>Tomato Seeds</h2>
-                <img src="./img/tomato-seeds.jpg" alt="" width="250px">
+                <img src="./img/hose-transparent.JPG" alt="">
                 <div id="details">
                     <p>10.99$</p>
                     <button class="buy">GET</button>
@@ -133,6 +154,72 @@
             </div>
         </section>
     </Products>
+
+    <footer>
+        <div class="footer">
+            <div class="header">
+                <div class="logo">
+                    <h1>JUNGLE.COM</h1>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="columns">
+                <div id="Owners">
+                    <h3 class="title">Contributors</h3>
+                    <ul>
+                        <li class="names"><strong>Habbouch</strong> Sofyane</li>
+                        <li class="names"><strong>Zaki</strong> Zakaria</li>
+                        <li class="names"> <strong>Hammou</strong> Mohamed</li>
+                    </ul>
+                </div>
+                <div class="column dont-hide">
+                    <h3 class="title">Contact US</h3>
+                    <a href="mailto : sofyanehab2024@gmail.com" class="emails">sofyanehab2024@gmail.com</a><br>
+                    <a href="mailto : zakizakaria@gmail.com" class="emails">zakizakaria@gmail.com"</a><br>
+                    <a href="mailto : mohamedhammou@gmail.com" class="emails">mohamedhammou@gmail.com</a><br>
+                </div>
+
+
+
+
+                <div id="opinion">
+                    <div>
+                        <h2 class="title">Rate US</h2>
+                        <div class="stars">
+                            <input type="radio" id="star1" value="1" name="rating" />
+                            <label for="star1"></label>
+
+                            <input type="radio" id="star2" name="rating" value="2" />
+                            <label for="star2"></label>
+
+                            <input type="radio" id="star3" name="rating" value="3" />
+                            <label for="star3"></label>
+
+                            <input type="radio" id="star4" name="rating" value="4" />
+                            <label for="star4"></label>
+
+                            <input type="radio" id="star5" name="rating" value="5" />
+                            <label for="star5"></label>
+                        </div>
+                        <textarea name="description" id="description" placeholder="Your opinion...">
+              </textarea>
+                        <div>
+                            <button type="submit" class="text-btn">Submit</button>
+                            <span class="text" onclick="clearTextrea()">Cancel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <hr>
+            <div class="copyright">
+                <p>Copyright © 2025 FPT. All rights reserved</p>
+            </div>
+
+    </footer>
 
     <script src="script.js"></script>
 </body>
