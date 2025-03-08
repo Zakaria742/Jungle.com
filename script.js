@@ -1,17 +1,31 @@
 let title = document.getElementById("title-card");
 let span = document.getElementsByTagName("span");
 let cursor = document.getElementById("cursor");
-
-let offsetX = 0;
-let offsetY = 0;
+let body = document.getElementById("body-main");
+let innerCircle = document.getElementById("inner_circle");
+let offsetX = 10;
+let offsetY = 10;
 document.addEventListener("mousemove", function (event) {
 
 	//console.log('Mouse X : ', event.clientX, 'Mouse Y : ', event.clientY);
-	setTimeout(() => {
-		cursor.style.top = `${event.clientY - 10}px`;
-		cursor.style.left = `${event.clientX - 10}px`;
-	}, 90)
+	cursor.style.top = `${event.clientY - offsetX}px`;
+	cursor.style.left = `${event.clientX - offsetY}px`;
+})
 
+document.addEventListener("mousedown", () => {
+	console.log("mouse is down !");
+	cursor.style.width = "20px";
+	cursor.style.height = "20px";
+	innerCircle.style.width = "55px";
+	innerCircle.style.width = "55px";
+})
+
+document.addEventListener("mouseup", () => {
+	console.log("mouse is up");
+	cursor.style.width = "15px";
+	cursor.style.height = "15px";
+	innerCircle.style.width = "50px";
+	innerCircle.style.width = "50px";
 })
 
 function right() {
@@ -24,6 +38,15 @@ function left() {
 
 function def() {
 	title.style = "text-shadow: 0px 0px 0px black;";
+}
+
+function show() {
+	body.style.opacity = "0%";
+	body.style.bottom = "50rem";
+	setTimeout(() => {
+		body.style.opacity = "100%";
+		body.style.bottom = "0";
+	}, 10);
 }
 
 let dropdown = document.querySelector("#dropdown");
