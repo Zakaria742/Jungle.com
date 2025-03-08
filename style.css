@@ -1,11 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-	--main-color: #71c971;
-	--main-color-transparent: #64ac64f3;
-	--main-color-transparent2: #4ca24c1c;
+
+	--main-color: #85e764;
+	--main-color-transparent: #64ac649e;
 	--second-color: tomato;
-	--third-color: #85e764;
 	--navbar-height: 120px;
 	--main-font: "Poppins";
 }
@@ -16,7 +15,8 @@
 	box-sizing: border-box;
 	list-style: none;
 	text-decoration: none;
-	cursor: none
+	cursor: none;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -24,8 +24,8 @@ body {
 	font-family: var(--main-font);
 	position: relative;
 	background-image: repeating-linear-gradient(45deg, var(--main-color-transparent2) 5%, var(--main-color-transparent2) 6%, white 5%, white 10%);
-	scroll-behavior: smooth;
-	opacity: 0;
+	opacity: 100%;
+	bottom: 0;
 	transition: opacity 2000ms ease-out, bottom ease-in-out 2000ms;
 	margin-top: .1rem;
 }
@@ -36,7 +36,7 @@ a {
 	color: #0e0e0e;
 
 	&:hover {
-		color: var(--third-color);
+		color: var(--main-color);
 		transition: all ease-in-out 500ms forwards alternate;
 	}
 
@@ -309,8 +309,11 @@ main {
 
 	&>h1 {
 		font-size: 8vw;
-		color: var(--third-color);
+		
 		transition: text-shadow ease-in-out 0.5s, transform ease 1s;
+		&>*{
+			color: var(--main-color);
+		}
 
 	}
 }
@@ -348,16 +351,19 @@ main {
 }
 
 .card {
-	width: 30rem;
-	padding: 1rem;
+	display: flex;
+	width: 24rem;
+	flex-direction: column;
+	height: auto;
+	justify-content: space-between;
+	padding: 3rem;
 	text-align: center;
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.211);
 	border-radius: 10px;
 	margin: 1rem;
 
 	&>img {
-		border-radius: 20%;
-		width: 65%;
+		width: 100%;
 		height: auto;
 		margin-bottom: 1rem;
 	}
@@ -365,25 +371,26 @@ main {
 	&>#details {
 		display: flex;
 		flex-direction: row;
-		text-align: left;
 		justify-content: space-between;
 		align-items: center;
 		transition: all ease-in-out 1000ms forwards;
+		gap: 1.5rem;
 
 		&>button {
 			padding: 1rem 4rem;
 			font-size: 1rem;
-			font-weight: lighter;
-			border: solid var(--second-color);
+			font-weight: light;
+			border: none;
 			border-radius: 0px;
 			transition: border-radius ease-in-out 300ms,
-				scale ease-in-out 300ms,
-				color ease-in-out 300ms;
-
+						scale ease-in-out 300ms,
+						background-color ease-in-out 300ms;
+			background-color: transparent;
+			border-radius: 5px;
 			&:hover {
 				border-radius: 20px;
-				scale: 1.1;
-				color: none;
+				scale: 1.07;
+				background-color: var(--second-color);
 			}
 		}
 	}
@@ -415,7 +422,6 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 10rem;
 
 	&>h1 {
 		font-size: 10vw;
@@ -424,7 +430,7 @@ main {
 	}
 
 	&>img {
-		width: 60%;
+		width: 80%;
 		height: auto;
 		border-radius: 20px;
 	}
@@ -565,7 +571,7 @@ button[type="submit"] {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	background-color: rgb(255, 255, 255);
-	padding: 3rem 0rem 0 1rem;
+	padding: 3rem 0rem 2rem 1rem;
 }
 
 .title {
@@ -645,7 +651,7 @@ input[type="radio"]:checked+label::before {
 }
 
 span {
-	color: var(--third-color);
+	color: var(--main-color);
 	font-weight: bolder;
 	text-decoration-line: underline black;
 }
@@ -657,23 +663,25 @@ span {
 
 #cursor {
 	position: fixed;
+	scale: 0.3;
+	height: auto;
 	z-index: 4;
-	width: 15px;
-	height: 15px;
 	border-radius: 50%;
 	background-color: var(--main-color-transparent);
 	pointer-events: none;
-	transition: width 500ms ease-out, height 200ms ease-out;
+	transition: scale 500ms ease-out, height 200ms ease-out;
 }
 
 #inner_circle {
-	width: 50px;
-	height: 50px;
+	scale: 3.5;
+	z-index: 3;
+	height: auto;
+	padding: 2rem;
+	height: auto;
 	border: solid 1px var(--main-color);
 	border-radius: 50%;
-	translate: -18px -18px;
 	top: 0;
-	transition: all 200ms ease-out;
+	transition: all 500ms ease-out;
 }
 
 @media (max-width: 700px) {
@@ -718,7 +726,8 @@ span {
 
 		&>#details {
 			flex-direction: column;
-			margin-top: 3rem;
+			justify-content: center;
+			align-items: center;
 		}
 	}
 

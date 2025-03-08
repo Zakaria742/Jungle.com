@@ -3,31 +3,21 @@ let span = document.getElementsByTagName("span");
 let cursor = document.getElementById("cursor");
 let body = document.getElementById("body-main");
 let innerCircle = document.getElementById("inner_circle");
-let offsetX = 10;
-let offsetY = 10;
+let offset = 33;
 document.addEventListener("mousemove", function (event) {
 
 	//console.log('Mouse X : ', event.clientX, 'Mouse Y : ', event.clientY);
-	cursor.style.top = `${event.clientY - offsetX}px`;
-	cursor.style.left = `${event.clientX - offsetY}px`;
+	cursor.style.top = `${event.clientY - offset}px`;
+	cursor.style.left = `${event.clientX - offset}px`;
 })
 
 document.addEventListener("mousedown", () => {
-	console.log("mouse is down !");
-	cursor.style.width = "20px";
-	cursor.style.height = "20px";
-	innerCircle.style.width = "55px";
-	innerCircle.style.width = "55px";
+	cursor.style.scale = "0.33";
 })
 
 document.addEventListener("mouseup", () => {
-	console.log("mouse is up");
-	cursor.style.width = "15px";
-	cursor.style.height = "15px";
-	innerCircle.style.width = "50px";
-	innerCircle.style.width = "50px";
+	cursor.style.scale = "0.3";
 })
-
 function right() {
 	title.style = "text-shadow: 1vw -.1px 0px black;";
 }
@@ -48,6 +38,12 @@ function show() {
 		body.style.bottom = "0";
 	}, 10);
 }
+
+if (!sessionStorage.getItem("show")) {
+	show();
+	sessionStorage.setItem("show", true);
+}
+
 
 let dropdown = document.querySelector("#dropdown");
 let dropBtns = document.querySelector(".dropdown-btns");
