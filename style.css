@@ -6,8 +6,9 @@
 	--main-color-transparent: #64ac649e;
 	--second-color: tomato;
 	--navbar-height: 120px;
-	--main-font: "Poppins";
+	--main-font: 'Poppins';
 }
+
 
 * {
 	padding: 0;
@@ -30,7 +31,9 @@ body {
 	margin-top: .1rem;
 }
 
-
+img{
+	-webkit-user-drag: none;
+}
 
 a {
 	color: #0e0e0e;
@@ -104,11 +107,6 @@ img {
 					transition: color ease-in-out 500ms;
 					color: var(--main-color);
 				}
-
-				/* & > svg {
-					transition: color ease-in-out 1000ms;
-					fill: var(--main-color);
-				} */
 			}
 
 			&>svg {
@@ -299,7 +297,6 @@ main {
 /*#ffdb58; */
 #main-title {
 	position: absolute;
-
 	max-width: 50%;
 	width: fit-content;
 	display: grid;
@@ -309,8 +306,8 @@ main {
 
 	&>h1 {
 		font-size: 8vw;
-		
 		transition: text-shadow ease-in-out 0.5s, transform ease 1s;
+		font-weight: 900;
 		&>*{
 			color: var(--main-color);
 		}
@@ -361,7 +358,9 @@ main {
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.211);
 	border-radius: 10px;
 	margin: 1rem;
-
+	&>h2{
+		font-weight: 400;
+	}
 	&>img {
 		width: 100%;
 		height: auto;
@@ -443,11 +442,11 @@ main {
 	height: auto;
 	justify-content: center;
 	align-items: center;
-	gap: 3rem;
+	gap: 6rem;
 	text-align: justify;
 	background-color: white;
 	border-radius: 19px;
-	padding: 2rem;
+	padding: 3rem 5rem;
 
 	&>img {
 		width: 30vw;
@@ -455,8 +454,9 @@ main {
 	}
 
 	&>p {
-		font-size: 1rem;
-		font-weight: 100;
+		font-size: 1.3rem;
+		font-weight: light;
+		line-height: 3rem;
 	}
 }
 
@@ -488,7 +488,12 @@ form {
 	text-align: center;
 	margin: 1rem;
 	width: 100%;
+	padding: 1rem;
 	overflow: hidden;
+	gap: 4rem;
+	&>h1{
+		font-size: 9rem;
+	}
 }
 
 #form {
@@ -500,35 +505,37 @@ form {
 	text-align: justify;
 	width: 60%;
 	gap: 4rem;
-	background-color: var(--main-color);
-	box-shadow: 0 10px 160px 5px rgba(0, 0, 0, 0.268);
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.268);
 	padding: 2rem;
+	border-radius: 20px;
 }
-
+#submit-section{
+	display: flex;
+	flex-direction: row;
+	gap: 3rem;
+}
 input[type="email"],
 input[type="password"] {
-	width: 90%;
-	border: none;
+	width: 10%;
+	border: solid 2px;
+	border-radius: 10px;
 	padding: 0.5rem 1.5rem;
-	;
+	transition: width 1000ms, border-color 500ms;
+	&:focus{
+		width: 70%;
+		
+	}
+	&:hover{
+		border-color: var(--second-color);
+	}
+	
 }
 
 input {
 	width: 10%;
 }
 
-button[type="submit"] {
-	max-width: 50%;
-	padding: 1rem 3rem;
-	border: none;
-	transition: background-color 500ms ease-in-out;
-	text-align: center;
-
-	&:hover {
-		background-color: aquamarine;
-
-	}
-}
 
 
 
@@ -574,6 +581,10 @@ button[type="submit"] {
 	padding: 3rem 0rem 2rem 1rem;
 }
 
+.column, #Owners{
+	width: fit-content;
+}
+
 .title {
 	width: fit-content;
 }
@@ -585,9 +596,8 @@ button[type="submit"] {
 
 .names,
 .emails {
-	font-weight: 400;
-	padding-left: 20px;
-	line-height: 25px;
+	font-weight: 400; 
+	line-height: 2.5rem;
 	text-decoration: none;
 	color: black;
 }
@@ -607,8 +617,8 @@ textarea {
 	background-color: gainsboro;
 	width: 100%;
 	height: 200px;
-	font-family: "Poppins", sans-serif;
-	font-weight: bold;
+	font-family: var(--main-font), sans-serif;
+	padding: 1rem;
 }
 
 .text {
@@ -650,11 +660,6 @@ input[type="radio"]:checked+label::before {
 	max-width: 100%;
 }
 
-span {
-	color: var(--main-color);
-	font-weight: bolder;
-	text-decoration-line: underline black;
-}
 
 /*---------Cursor--------*/
 ::selection {
@@ -669,7 +674,7 @@ span {
 	border-radius: 50%;
 	background-color: var(--main-color-transparent);
 	pointer-events: none;
-	transition: scale 500ms ease-out, height 200ms ease-out;
+	transition: scale 300ms ease-in-out, background-color 200ms ease-in-out;
 }
 
 #inner_circle {
@@ -681,7 +686,35 @@ span {
 	border: solid 1px var(--main-color);
 	border-radius: 50%;
 	top: 0;
-	transition: all 500ms ease-out;
+	transition: background-color 200ms ease-in-out;
+}
+
+
+
+/*--------End--------*/
+button {
+	padding: 1rem 4rem;
+	font-size: 1rem;
+	font-weight: light;
+	border: none;
+	border-radius: 0px;
+	transition: border-radius ease-in-out 300ms,
+				scale ease-in-out 300ms,
+				background-color ease-in-out 300ms;
+	background-color: transparent;
+	border-radius: 5px;
+	&:hover {
+		border-radius: 20px;
+		scale: 1.07;
+		background-color: var(--second-color);
+	}
+}
+
+span:not(#jun ,#gle) {
+	color: var(--main-color);
+	font-weight: bolder;
+	text-decoration-line: underline black;
+	font-style: italic;
 }
 
 @media (max-width: 700px) {
