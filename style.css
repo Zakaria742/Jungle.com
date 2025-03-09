@@ -30,7 +30,6 @@ body {
 	bottom: 0;
 	transition: opacity 2000ms ease-out, bottom ease-in-out 2000ms;
 	margin-top: .1rem;
-	position: relative;
 }
 
 
@@ -60,8 +59,8 @@ img {
 .nav-bar {
 	position: fixed;
 	width: 100%;
-	z-index: 3;
-	top: 0rem;
+	z-index: 2;
+	top: 0;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -413,11 +412,12 @@ main {
 #popup-container {
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     background-color: rgba(104, 104, 104, 0.486);
-    display: none;
+    display: flex;
+	z-index: 3;
     flex-direction: column;
     align-items: center;
     justify-content: center;
