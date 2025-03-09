@@ -98,3 +98,6 @@ function showPopup() {
     popupContainer.style.display = 'flex';
 }
 
+function hidePopup() {
+    popupContainer.style.display = 'none';
+}
