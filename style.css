@@ -722,19 +722,18 @@ button {
 	}
 }
 
-/* #loading-screen{
+#loading-screen{
 	margin: 0;
 	padding: 0;
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(165, 0, 0, 0.454); 
+	background-color: red; 
 	z-index: 10;
-	pointer-events: none;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-} */
+}
 
 span:not(#jun ,#gle) {
 	color: var(--main-color);
