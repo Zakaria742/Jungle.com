@@ -1,14 +1,70 @@
+let mainTitle = document.getElementById("main-title");
 let title = document.getElementById("title-card");
 let span = document.getElementsByTagName("span");
 let cursor = document.getElementById("cursor");
 let body = document.getElementById("body-main");
 let innerCircle = document.getElementById("inner_circle");
-let offset = 33;
+let offset = 10;
 let targetX = 0, targetY = 0;
+
 
 function lerp(start, end, time) {
 	return start + (end - start) * time;
 }
+
+function right() {
+	title.style = "text-shadow: 0.5vw -.1px 0px black;";
+}
+
+function left() {
+	title.style = "text-shadow: -0.5vw -.1px 0px black;";
+}
+
+function def() {
+	title.style = "text-shadow: 0px 0px 0px black;";
+}
+
+function show() {
+	body.style.opacity = "0%";
+	body.style.bottom = "50rem";
+	mainTitle.style.translate = "0px 0px";
+	mainTitle.style.opacity = "0"
+	setTimeout(() => {
+		body.style.opacity = "100%";
+		body.style.bottom = "0";
+	}, 10);
+
+	setTimeout(() => {
+		mainTitle.style.translate = "25vw 0px";
+		mainTitle.style.opacity =  "1";
+	}, 1800)
+	
+}
+if (!sessionStorage.getItem("show")) {
+	show();
+	sessionStorage.setItem("show", true);
+}
+
+
+function winEvent(){
+	mainTitle.style.opacity = "1";
+	if(window.innerWidth > 1026){
+		mainTitle.style.translate = "25vw 0px";
+	}
+	else{
+		
+		mainTitle.style.translate = `0px`;
+	}
+
+	requestAnimationFrame(winEvent)
+
+}
+if(mainTitle){
+	winEvent();
+}
+
+
+
 
 document.addEventListener("mousemove", function (event) {
 
@@ -23,53 +79,65 @@ function update() {
 	const currentTop = parseFloat(cursor.style.top) || 0;
 	const currentLeft = parseFloat(cursor.style.left) || 0;
 
-	const newTop = lerp(currentTop, targetY - offset, .2);
-	const newLeft = lerp(currentLeft, targetX - offset, .2);
+	cursor.style.top = `${targetY - offset}px`;
+	cursor.style.left = `${targetX - offset}px`;
 
-	cursor.style.top = `${newTop}px`;
-	cursor.style.left = `${newLeft}px`;
-
+	document.querySelectorAll('button, a').forEach(elements=> {
+		elements.onmouseenter = () => {
+			cursor.style.backgroundColor = "var(--main-color-transparent)";
+			cursor.style.border = "solid 1px black";
+			innerCircle.scale = "2";
+			innerCircle.style.backgroundColor = "var(--main-color-transparent)";
+			innerCircle.style.border = "none";
+		}
+		elements.onmouseleave = () => {
+			cursor.style.backgroundColor = "var(--main-color)";
+			cursor.style.border = "none";
+			innerCircle.scale = "1";
+			innerCircle.style.backgroundColor = "rgb(0, 0, 0, 0)";
+			innerCircle.style.border = "solid 1px var(--main-color)";
+		}
+	})
 
 	requestAnimationFrame(update);
 }
 update();
 
-function cursorClick() {
 
-	let hov = getHovered();
+function update2() {
+	const currentTop = parseFloat(innerCircle.style.top) || 0;
+	const currentLeft = parseFloat(innerCircle.style.left) || 0;
+
+	const newTop = lerp(currentTop, targetY - offset*3, .2);
+	const newLeft = lerp(currentLeft, targetX - offset*3, .2);
+
+	innerCircle.style.top = `${newTop}px`;
+	innerCircle.style.left = `${newLeft}px`;
+
+
+	requestAnimationFrame(update2);
+}
+update2();
+
+function cursorClick() {
 
 	document.addEventListener("mouseup", () => {
 
-		cursor.style.scale = "0.3";
+		cursor.style.scale = "1";
 		cursor.style.backgroundColor = "var(--main-color)";
 		innerCircle.style.borderColor = "var(--main-color)";
 
 	})
 
 	document.addEventListener("mousedown", () => {
-		cursor.style.scale = "0.33";
+		cursor.style.scale = "0.3";
 		cursor.style.backgroundColor = "var(--second-color)";
 		innerCircle.style.borderColor = "var(--second-color)";
 	})
-
-	requestAnimationFrame(cursorClick());
 }
 cursorClick();
+requestAnimationFrame(cursorClick);
 
-
-function show() {
-	body.style.opacity = "0%";
-	body.style.bottom = "50rem";
-	setTimeout(() => {
-		body.style.opacity = "100%";
-		body.style.bottom = "0";
-	}, 10);
-}
-
-if (!sessionStorage.getItem("show")) {
-	show();
-	sessionStorage.setItem("show", true);
-}
 
 
 let dropdown = document.querySelector("#dropdown");
@@ -114,17 +182,5 @@ submit.addEventListener("click", () => {
 });
 
 
-
-function right() {
-	title.style = "text-shadow: 0.5vw -.1px 0px black;";
-}
-
-function left() {
-	title.style = "text-shadow: -0.5vw -.1px 0px black;";
-}
-
-function def() {
-	title.style = "text-shadow: 0px 0px 0px black;";
-}
 
 
