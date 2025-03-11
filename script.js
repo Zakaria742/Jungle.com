@@ -26,25 +26,28 @@ function def() {
 
 function show() {
 	body.style.opacity = "0%";
-	body.style.bottom = "50rem";
-	mainTitle.style.translate = "0px 0px";
-	mainTitle.style.opacity = "0"
+	body.style.translate = "0 -50rem"
+	// mainTitle.style.translate = "0px 0px";
+	// mainTitle.style.opacity = "0"
 	setTimeout(() => {
 		body.style.opacity = "100%";
-		body.style.bottom = "0";
+		body.style.translate = "unset";
 	}, 10);
 
 	setTimeout(() => {
 		mainTitle.style.translate = "25vw 0px";
 		mainTitle.style.opacity =  "1";
-	}, 1800)
+	}, 2000)
 	
 }
 if (!sessionStorage.getItem("show")) {
 	show();
 	sessionStorage.setItem("show", true);
+	console.log("Yes sir!")
 }
-
+else{
+	console.log("No sir :(");
+}
 
 function winEvent(){
 	mainTitle.style.opacity = "1";
@@ -82,13 +85,12 @@ function update() {
 	cursor.style.top = `${targetY - offset}px`;
 	cursor.style.left = `${targetX - offset}px`;
 
-	document.querySelectorAll('button, a').forEach(elements=> {
+	document.querySelectorAll('button, a, input, .stars').forEach(elements=> {
 		elements.onmouseenter = () => {
 			cursor.style.backgroundColor = "var(--main-color-transparent)";
 			cursor.style.border = "solid 1px black";
 			innerCircle.scale = "2";
-			innerCircle.style.backgroundColor = "var(--main-color-transparent)";
-			innerCircle.style.border = "none";
+			innerCircle.style.border = "solid 1px var(--second-color)";
 		}
 		elements.onmouseleave = () => {
 			cursor.style.backgroundColor = "var(--main-color)";

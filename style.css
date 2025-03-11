@@ -26,10 +26,10 @@ body {
 	min-height: 100vh;
 	font-family: var(--main-font);
 	position: relative;
-	background-image: repeating-linear-gradient(45deg, var(--main-color-transparent2) 5%, var(--main-color-transparent2) 6%, white 5%, white 10%);
 	opacity: 100%;
-	bottom: 0;
-	transition: opacity 2000ms ease-out, bottom ease-in-out 2000ms;
+	translate: unsetti;
+	background-image: repeating-linear-gradient(45deg, var(--main-color-transparent2) 5%, var(--main-color-transparent2) 6%, white 5%, white 10%);
+	transition: opacity 2000ms ease-out, translate ease-in-out 2000ms;
 	margin-top: .1rem;
 }
 
@@ -305,9 +305,9 @@ main {
 	gap: 1em;
 	text-align: center;
 	top: 20rem;
-	opacity: 1;
-	translate: 25vw 0px;
-	transition: translate 3000ms ease-out, opacity 500ms ease-out;
+	opacity: 0;
+	translate: unset;
+	transition: translate 2s ease-out, opacity 5s ease-out;
 	&>h1 {
 		font-size: 8vw;
 		transition: text-shadow ease-in-out 0.5s, transform ease 1s;
@@ -337,7 +337,7 @@ main {
 }
 
 /*------------Products----------*/
-#seeds {
+.seeds {
 	display: grid;
 	grid-template-columns: none;
 	grid-auto-flow: column;
@@ -400,14 +400,15 @@ main {
 }
 
 .product-title {
-	font-size: 1rem;
+	font-size: 2rem;
 	text-align: center;
 	margin: 1rem 0rem;
 	z-index: 1;
-	padding: 13rem 2rem;
+	padding: 13rem 4rem;
 	height: 100%;
 	width: 200px;
 	background-color: var(--second-color);
+	writing-mode:vertical-lr
 }
 
 /*--------Introduction-------*/
@@ -722,7 +723,7 @@ button {
 	}
 }
 
-#loading-screen{
+/* #loading-screen{
 	margin: 0;
 	padding: 0;
 	position: absolute;
@@ -733,6 +734,11 @@ button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+} */
+
+#dark:checked~ #body-main{
+	background-color: black;
+	color: black;
 }
 
 span:not(#jun ,#gle) {
@@ -748,7 +754,7 @@ span:not(#jun ,#gle) {
 	*{
 		cursor: default;
 	}
-	#cursor {
+	#pointer {
 		display: none;
 	}
 
@@ -770,6 +776,7 @@ span:not(#jun ,#gle) {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+
 	}
 
 	.stars {
@@ -791,6 +798,15 @@ span:not(#jun ,#gle) {
 
 	.dont-hide {
 		display: block;
+	}
+
+	.columns{
+		padding-bottom: 5rem;
+
+	}
+
+	.p1{
+		padding: 0 1rem;
 	}
 }
 
