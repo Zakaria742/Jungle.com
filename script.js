@@ -26,12 +26,12 @@ function def() {
 
 function show() {
 	body.style.opacity = "0%";
-	body.style.translate = "0 -50rem"
+	body.style.translate = "0rem -50rem"
 	// mainTitle.style.translate = "0px 0px";
 	// mainTitle.style.opacity = "0"
 	setTimeout(() => {
 		body.style.opacity = "100%";
-		body.style.translate = "unset";
+		body.style.translate = "0rem 0rem";
 	}, 10);
 
 	setTimeout(() => {
@@ -182,5 +182,44 @@ function clearTextrea() {
 submit.addEventListener("click", () => {
 	alert(text.value);
 });
+
+
+
+
+
+
+//Pop up
+
+
+let element = document.getElementById("products")
+let picture = element.querySelectorAll("#pop-title>img")
+let pop = document.getElementById("popup")
+let description = document.getElementById("desc")
+
+let popTitle = document.querySelectorAll("#pop-title");
+
+function lerp(start, finish, time) {
+    return start + (finish - start) * time;
+}
+
+
+popTitle.forEach(element => {
+    let img = element.querySelector("img");
+
+    element.onmouseover = () => {
+        let title = element.querySelector("h1");
+        pop.querySelector("h1").innerText = title.innerText;
+        pop.querySelector("img").setAttribute("src", img.currentSrc)
+        pop.style.scale = "0.8";
+    }
+    element.onmouseout = () => {
+        pop.style.scale = "0";
+
+    }
+    document.addEventListener("mousemove", function (event) {
+        pop.style.left = `${targetX - 200}px`;
+        pop.style.top = `${targetY - 300}px`;
+    })
+})
 
 
