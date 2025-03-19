@@ -62,8 +62,8 @@ img {
 .nav-bar {
 	position: fixed;
 	width: 100%;
-	z-index: 3;
-	top: 0rem;
+	z-index: 2;
+	top: 0;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -343,7 +343,7 @@ main {
 	align-items: center;
 	grid-template-columns: none;
 	grid-auto-flow: column;
-	overflow-x: scroll;
+	overflow-x: auto;
 	overflow-y: hidden;
 	gap: 3rem;
 	height: fit-content;
@@ -375,14 +375,13 @@ main {
 		flex-direction: column-reverse;
 		justify-content: space-between;
 		align-items: center;
-		transition: all ease-in-out 1000ms forwards;
-		gap: 1.5rem;
-
-		&>button {
-			padding: 1rem 4rem;
-			font-size: 1rem;
-			font-weight: light;
-			border: none;
+		transition: all ease-in-out 1s forwards;
+        &>button {
+            padding: 1rem 4rem;
+            font-size: 1rem;
+            font-weight: lighter;
+            border: solid var(--second-color);
+            cursor: pointer;
 			border-radius: 0px;
 			transition: border-radius ease-in-out 300ms,
 						scale ease-in-out 300ms,
@@ -392,11 +391,10 @@ main {
 			border-radius: 5px;
 			&:hover {
 				border-radius: 20px;
-				scale: 1.07;
-				background-color: var(--second-color);
+				scale: 1.1;
 			}
-		}
-	}
+        }
+    }
 }
 
 .product-title {

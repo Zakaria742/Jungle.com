@@ -3,6 +3,8 @@ let title = document.getElementById("title-card");
 let span = document.getElementsByTagName("span");
 let cursor = document.getElementById("cursor");
 let body = document.getElementById("body-main");
+let popupContainer= document.getElementById('popup-container');
+let cards = document.querySelectorAll(".card");
 let innerCircle = document.getElementById("inner_circle");
 let offset = 10;
 let targetX = 0, targetY = 0;
