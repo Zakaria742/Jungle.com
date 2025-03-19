@@ -25,44 +25,40 @@ function def() {
 }
 
 function show() {
-	body.style.opacity = "0%";
-	body.style.translate = "0rem -50rem"
-	// mainTitle.style.translate = "0px 0px";
-	// mainTitle.style.opacity = "0"
+
+	body.style.opacity = "0";
+body.style.translate = "0rem -50vw";
 	setTimeout(() => {
 		body.style.opacity = "100%";
-		body.style.translate = "0rem 0rem";
+		body.style.translate = "unset";
 	}, 10);
 
 	setTimeout(() => {
 		mainTitle.style.translate = "25vw 0px";
-		mainTitle.style.opacity =  "1";
+		mainTitle.style.opacity = "1";
 	}, 2000)
-	
+
 }
 if (!sessionStorage.getItem("show")) {
-	show();
-	sessionStorage.setItem("show", true);
-	console.log("Yes sir!")
-}
-else{
-	console.log("No sir :(");
+
+		sessionStorage.setItem("show", true);
+		show();
 }
 
-function winEvent(){
+function winEvent() {
 	mainTitle.style.opacity = "1";
-	if(window.innerWidth > 1026){
+	if (window.innerWidth > 1026) {
 		mainTitle.style.translate = "25vw 0px";
 	}
-	else{
-		
+	else {
+
 		mainTitle.style.translate = `0px`;
 	}
 
 	requestAnimationFrame(winEvent)
 
 }
-if(mainTitle){
+if (mainTitle) {
 	winEvent();
 }
 
@@ -85,7 +81,7 @@ function update() {
 	cursor.style.top = `${targetY - offset}px`;
 	cursor.style.left = `${targetX - offset}px`;
 
-	document.querySelectorAll('button, a, input, .stars').forEach(elements=> {
+	document.querySelectorAll('button, a, input, .stars').forEach(elements => {
 		elements.onmouseenter = () => {
 			cursor.style.backgroundColor = "var(--main-color-transparent)";
 			cursor.style.border = "solid 1px black";
@@ -110,8 +106,8 @@ function update2() {
 	const currentTop = parseFloat(innerCircle.style.top) || 0;
 	const currentLeft = parseFloat(innerCircle.style.left) || 0;
 
-	const newTop = lerp(currentTop, targetY - offset*3, .2);
-	const newLeft = lerp(currentLeft, targetX - offset*3, .2);
+	const newTop = lerp(currentTop, targetY - offset * 3, .2);
+	const newLeft = lerp(currentLeft, targetX - offset * 3, .2);
 
 	innerCircle.style.top = `${newTop}px`;
 	innerCircle.style.left = `${newLeft}px`;
@@ -199,27 +195,27 @@ let description = document.getElementById("desc")
 let popTitle = document.querySelectorAll("#pop-title");
 
 function lerp(start, finish, time) {
-    return start + (finish - start) * time;
+	return start + (finish - start) * time;
 }
 
 
 popTitle.forEach(element => {
-    let img = element.querySelector("img");
+	let img = element.querySelector("img");
 
-    element.onmouseover = () => {
-        let title = element.querySelector("h1");
-        pop.querySelector("h1").innerText = title.innerText;
-        pop.querySelector("img").setAttribute("src", img.currentSrc)
-        pop.style.scale = "0.8";
-    }
-    element.onmouseout = () => {
-        pop.style.scale = "0";
+	element.onmouseover = () => {
+		let title = element.querySelector("h1");
+		pop.querySelector("h1").innerText = title.innerText;
+		pop.querySelector("img").setAttribute("src", img.currentSrc)
+		pop.style.scale = "0.8";
+	}
+	element.onmouseout = () => {
+		pop.style.scale = "0";
 
-    }
-    document.addEventListener("mousemove", function (event) {
-        pop.style.left = `${targetX - 200}px`;
-        pop.style.top = `${targetY - 300}px`;
-    })
+	}
+	document.addEventListener("mousemove", function (event) {
+		pop.style.left = `${targetX - 200}px`;
+		pop.style.top = `${targetY - 300}px`;
+	})
 })
 
 
