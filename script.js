@@ -10,7 +10,8 @@ let offset = 10;
 let targetX = 0,
   targetY = 0;
 
-//i'm in
+//i'm in;
+//this is a comment;
 function lerp(start, end, time) {
   return start + (end - start) * time;
 }
