@@ -80,25 +80,17 @@ function cursorClick() {
 cursorClick();
 requestAnimationFrame(cursorClick);
 
-
-
-let dropdown = document.querySelector("#dropdown");
-let dropBtns = document.querySelector(".dropdown-btns");
-
-function changeDropIcon() {
-	if (dropdown.checked) {
-		dropBtns.innerHTML = `<svg class="dropdown-btn" xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24" stroke-width="1.5"
-				stroke="currentColor" class="size-6">
-				<path stroke-linecap="round" stroke-linejoin="round"
-					d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-			</svg>`;
-	} else {
-		dropBtns.innerHTML = `<svg class="dropdown-btn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-					<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-				</svg>`;
-	}
+const opinion = document.getElementById("opinion");
+const clearBtn = document.getElementById("btnClear");
+const submitBtn = document.getElementById("btnSubmit");
+//footer
+function clear(){
+	opinion.value = "";
 }
-
+clearBtn.addEventListener("click", clear);
+submitBtn.addEventListener("click", () =>{
+	alert(`Opintion submitted : ${opinion.value}`);
+});
 
 //Pop up
 
