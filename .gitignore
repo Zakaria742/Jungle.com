@@ -38,4 +38,4 @@ build/
 *.rej
 
 # Custom identifier files
-*.identifier
+*:Zone.identifier
