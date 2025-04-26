@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar", dir="rtl">
 
 <head>
     <meta charset="UTF-8">
@@ -18,17 +18,16 @@
     </cursor>
 
     <nav id="nav-bar">
-
         <ul>
-            <li title="Home">
+            <li title="About">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                     fill="#1f1f1f">
                     <path
-                        d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
+                        d="M440-560q33 0 56.5-23.5T520-640q0-33-23.5-56.5T440-720q-33 0-56.5 23.5T360-640q0 33 23.5 56.5T440-560Zm0 160q45 0 84.5-19t68.5-54q-35-23-73.5-35T440-520q-41 0-79.5 12T287-473q29 35 68.5 54t84.5 19Zm384 280L636-308q-41 32-90.5 50T440-240q-134 0-227-93t-93-227q0-134 93-227t227-93q134 0 227 93t93 227q0 56-18 105.5T692-364l188 188-56 56ZM440-320q100 0 170-70t70-170q0-100-70-170t-170-70q-100 0-170 70t-70 170q0 100 70 170t170 70Zm0-240Z" />
                 </svg>
-                <a href="#">الرئيسية</a>
+                <a href="about.html">معلومات عنا</a>
             </li>
-            <li title="Products">
+            <li title="product">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                     fill="#1f1f1f">
                     <path
@@ -36,16 +35,16 @@
                 </svg>
                 <a href="./products.html">المنتجات</a>
             </li>
-            <li title="About">
+            
+            <li title="Home">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                     fill="#1f1f1f">
                     <path
-                        d="M440-560q33 0 56.5-23.5T520-640q0-33-23.5-56.5T440-720q-33 0-56.5 23.5T360-640q0 33 23.5 56.5T440-560Zm0 160q45 0 84.5-19t68.5-54q-35-23-73.5-35T440-520q-41 0-79.5 12T287-473q29 35 68.5 54t84.5 19Zm384 280L636-308q-41 32-90.5 50T440-240q-134 0-227-93t-93-227q0-134 93-227t227-93q134 0 227 93t93 227q0 56-18 105.5T692-364l188 188-56 56ZM440-320q100 0 170-70t70-170q0-100-70-170t-170-70q-100 0-170 70t-70 170q0 100 70 170t170 70Zm0-240Z" />
+                        d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
                 </svg>
-                <a href="./about.html">معلومات عنا</a>
+                <a href="index.html">الرئيسية</a>
             </li>
         </ul>
-        
         <h1><a href="./index.html" class="nav-title">محاليل</a></h1>
 
     </nav>
@@ -123,7 +122,7 @@
                 <div class="col">
                     <h3 class="title">اتصل بنا</h3>
                     <ul>
-                        <li class="names">sofyane.habbouch.92@edu.uiz.ac.ma</li>
+                        <li class="names">soufyan@</li>
                         <li class="names">zaakizakaria12@gmail.com</li>
                         <li class="names">mohamed.hammou.78@edu.uiz.ac.ma</li>
                     </ul>
@@ -131,7 +130,11 @@
                 <div class="col">
                     <h3 class="title">!اترك رايك</h3>
                     <textarea name="opinion" id="opinion" wrap="soft"></textarea>
-                    <button name="opinion">SUBMIT</button>
+                    <div>
+                        <button type="submit" name="opinion" id="btnSubmit">SUBMIT</button>
+                        <button type="submit" name="opinion" id="btnClear">CLEAR</button>
+                    </div>
+
                 </div>
             </div>
             <div class="copyright">

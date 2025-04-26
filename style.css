@@ -31,11 +31,6 @@ body {
 }
 
 
-
-img {
-	-webkit-user-drag: none;
-}
-
 a {
 	color: #0e0e0e;
 
@@ -52,7 +47,9 @@ a {
 
 img {
 	user-select: none;
+	-webkit-user-drag: none;
 }
+
 
 /*-----------navigation bar--------------*/
 #nav-bar {
@@ -61,6 +58,7 @@ img {
 	z-index: 2;
 	top: 0;
 	display: flex;
+	flex-direction: row-reverse;
 	align-items: center;
 	justify-content: space-between;
 	background-color: #fff;
@@ -133,7 +131,7 @@ img {
 	overflow: hidden;
 	align-items: center;
 	position: relative;
-	justify-content: flex-end;
+	justify-content: flex-start;
 	top: -10rem;
 	opacity: 0;
 	transition: all ease-in-out 1000ms;
@@ -386,7 +384,7 @@ form {
 	display: flex;
 	flex-direction: column;
 	justify-content: left;
-	align-items: flex-end;
+	align-items: flex-start;
 	text-align: justify;
 	width: 60%;
 	gap: 4rem;
@@ -449,9 +447,6 @@ input[type="password"] {
 	&>li{
 		font-size: 1.2vw;
 	}
-}
-.title{
-	text-align: end;
 }
 .col{
 	width: 100%;
@@ -610,7 +605,8 @@ span{
 
 	.p1 {
 		display: flex;
-
+		opacity: 1;
+		left: 0rem;
 		&:nth-child(odd) {
 			flex-direction: column-reverse;
 		}
