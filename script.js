@@ -1,13 +1,10 @@
-let mainTitle = document.getElementById("main-title");
-let span = document.getElementsByTagName("span");
+//Updating the movement of the cursor
+
 let cursor = document.getElementById("cursor");
-let body = document.getElementById("body-main");
-let popupContainer = document.getElementById('popup-container');
-let cards = document.querySelectorAll(".card");
+
 let innerCircle = document.getElementById("inner_circle");
 let offset = 10;
 let targetX = 0, targetY = 0;
-
 
 function lerp(start, end, time) {
 	return start + (end - start) * time;
@@ -80,28 +77,31 @@ function cursorClick() {
 cursorClick();
 requestAnimationFrame(cursorClick);
 
+
+//Footer
 const opinion = document.getElementById("opinion");
 const clearBtn = document.getElementById("btnClear");
 const submitBtn = document.getElementById("btnSubmit");
-//footer
+
 function clear(){
 	opinion.value = "";
 }
+
 clearBtn.addEventListener("click", clear);
+
 submitBtn.addEventListener("click", () =>{
-	alert(`Opintion submitted : ${opinion.value}`);
+	alert(`لا احد سيقرا رايك : ${opinion.value}`);
 });
 
 //Pop up
-
-
 let element = document.getElementById("products")
 let picture = document.querySelectorAll("#pop-title>img")
 let pop = document.getElementById("popup")
 let description = document.getElementById("desc")
-
 let popTitle = document.querySelectorAll("#pop-title");
 
+
+//fetching json for products
 async function fetchProduct() {
 	try {
 		const product = await fetch("./products.json");
@@ -150,7 +150,7 @@ activatePopUp();
 const mainSection = document.getElementById("main-section");
 const introSection = document.getElementById("p-main");
 const introCards = document.querySelectorAll(".p1");
-const form = document.getElementById("formSection");
+const form = document.getElementById("form");
 
 const option = {
 	threshold: 0.2
@@ -161,7 +161,7 @@ const option2 = {
 function slideUpIntersection(entries, observer) {
 	entries.forEach(entry => {
 		if (entry.isIntersecting) {
-			entry.target.style.top = "4.5rem";
+			entry.target.style.top = "0rem";
 			entry.target.style.opacity = "1";
 			observer.unobserve(mainSection);
 		}
@@ -182,11 +182,11 @@ let slideUp = new IntersectionObserver(slideUpIntersection, option);
 let slideLeft = new IntersectionObserver(slideSidesIntersection, option2);
 slideUp.observe(mainSection);
 slideUp.observe(introSection);
-slideUp.observe(form)
+slideUp.observe(form);
 
 introCards.forEach( e => (slideLeft.observe(e)) );
 
 
-//fetching json for products
+
 
 

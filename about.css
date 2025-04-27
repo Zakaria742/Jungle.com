@@ -296,6 +296,15 @@ p {
 	font-weight: 400;
 	padding: .5rem 1rem;
 	margin-top: 1rem;
+	border: solid 1px;
+	margin-right: 1rem;
+	transition: all ease-in-out 300ms;
+	border-radius: 3px;
+	&:hover {
+		border-radius: 10px;
+		scale: 1.07;
+		background-color: var(--second-color);
+	}
 }
 .names{
 	list-style: url("/public/emergency.png");
