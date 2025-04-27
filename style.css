@@ -382,7 +382,7 @@ form {
 	position: relative;
 	opacity: 0;
 	top: -4rem;
-	transition: all ease-in-out 1000ms;
+	transition: all ease-in-out 2000ms;
 	&>p{
 		font-weight: lighter;
 	}

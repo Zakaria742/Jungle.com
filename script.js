@@ -160,8 +160,12 @@ const option2 = {
 }
 function slideUpIntersection(entries, observer) {
 	entries.forEach(entry => {
-		if (entry.isIntersecting) {
-			entry.target.style.top = "0rem";
+		if (entry.target.tagName == 'MAIN' && entry.isIntersecting) {
+			entry.target.style.top = "4.5rem";
+			entry.target.style.opacity = "1";
+			observer.unobserve(mainSection);
+		}else{
+			entry.target.style.top = "0";
 			entry.target.style.opacity = "1";
 			observer.unobserve(mainSection);
 		}
