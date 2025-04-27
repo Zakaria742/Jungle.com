@@ -29,7 +29,7 @@
 body {
 	scroll-behavior: smooth;
 	min-height: 100vh;
-	font-family: var(--main-font);
+	font-family: 'Cairo';
 	transition: opacity 2000ms ease-out, translate ease-in-out 2000ms;
 	margin-top: .1rem;
 	overflow-x: hidden;
