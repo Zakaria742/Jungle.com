@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Cairo";
+    src: url("/fonts/Cairo.ttf");
+}
+
 :root {
 
 	--main-color: #85e764;
